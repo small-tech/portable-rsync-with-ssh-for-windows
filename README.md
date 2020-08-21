@@ -10,13 +10,15 @@ The same set of libraries (some of which were newer versions) were copied from t
 
 ## Usage
 
-When run from the _bin/_ directory, the `rsync` and `ssh` commands believe they are running from `/bin` (so `..` is root).
+When run from the `bin/` directory, the `rsync` and `ssh` commands believe that they are running from `/bin/` and that the root is their parent folder.
 
-As such, they will fail unless they find:
+To access Windows paths, you must specify them in cygwin format with without the `/cygdrive` path prefix. E.g., `/c/my-folder` points to `C:\my-folder`. 
 
-  - `/home/{YOUR_ACCOUNT}`
-  - `/home/{YOUR_ACCOUNT}/.ssh/id_ed25519` (or id_rsa, etc., if using SSH keys)
+The exception is the home folder since `etc/nsswitch.conf` tells them to use your Windows home as the home directory.
 
+By default, the command will try to use the keys defined in your `"${env:home}\.ssh"` (using your Windows home). __The keys in here must be in Linux format (with `LF` line endings), not Windows format (with `CRLF` line endings).__
+
+The `ssh` binary that comes with this distribution cannot read keys with Windows line endings and will throw an `invalid format` error while trying to load the key. The OpenSSH version that comes preinstalled on Windows 10, on the other hand, can read keys with Linux line endings properly. So as long as your keys are written out with Linux line endings (e.g., generated from Windows Subsystem for Linux, etc.), then they will work under both Windows and this emulated cygwin rsync.
 
 ## Current versions
 
