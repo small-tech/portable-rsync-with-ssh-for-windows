@@ -12,7 +12,7 @@ npm install portable-rsync-with-ssh-for-windows
 
 When run from the `bin/` directory, the `rsync` and `ssh` commands believe that they are running from `/bin/` and that the root is their parent folder.
 
-To access Windows paths, you must specify them in cygwin format with without the `/cygdrive` path prefix (as configured in `etc/fstab`). E.g., `/c/my-folder` points to `C:\my-folder`. 
+To access Windows paths, you must specify them in cygwin format without the `/cygdrive` path prefix (as configured in `etc/fstab`). E.g., `/c/my-folder` points to `C:\my-folder`. 
 
 The exception is the home folder since `etc/nsswitch.conf` tells them to use your Windows home as the home directory.
 
