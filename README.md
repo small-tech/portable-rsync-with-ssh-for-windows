@@ -20,7 +20,7 @@ By default, the command will try to use the keys defined in your `"${env:home}\.
 
 The `ssh` binary that comes with this distribution cannot read keys with Windows line endings and will throw an `invalid format` error while trying to load the key. The OpenSSH version that comes preinstalled on Windows 10, on the other hand, can read keys with Linux line endings properly. So as long as your keys are written out with Linux line endings (e.g., generated from Windows Subsystem for Linux, etc.), then they will work under both Windows and this emulated cygwin rsync.
 
-Note: Node.js always writes out files with `LF` line endings, even on Windows. So if you're generating your keys from Node.js, you should be fine with the default behaviour.
+__Note:__ Node.js always writes out files with `LF` line endings, even on Windows. So if you're generating your keys from Node.js, you should be fine with the default behaviour.
 
 ## Current versions
 
