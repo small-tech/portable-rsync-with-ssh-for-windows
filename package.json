@@ -1,0 +1,23 @@
+{
+  "name": "portable-rsync-with-ssh-for-windows",
+  "version": "1.0.0",
+  "description": "A portable distribution of rsync with SSH for Windows. Uses the binaries from cygwin. Runs without cygwin installed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@source.small-tech.org:site.js/lib/portable-rsync-with-ssh-for-windows.git"
+  },
+  "keywords": [
+    "rsync",
+    "windows",
+    "ssh",
+    "portable",
+    "cygwin",
+    "cygrsync"
+  ],
+  "author": "Aral Balkan",
+  "license": "AGPL-3.0-or-later"
+}
