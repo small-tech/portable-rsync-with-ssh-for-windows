@@ -24,7 +24,7 @@ __Note:__ Node.js always writes out files with `LF` line endings, even on Window
 
 ### With Nexe
 
-Include `node_modules/portable-rsync-with-ssh-for-windows` in your resources.
+Include `node_modules/@small-tech/portable-rsync-with-ssh-for-windows` in your resources.
 
 ## Reproducing
 

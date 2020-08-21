@@ -1,5 +1,5 @@
 {
-  "name": "portable-rsync-with-ssh-for-windows",
+  "name": "@small-tech/portable-rsync-with-ssh-for-windows",
   "version": "1.0.0",
   "description": "A portable distribution of rsync with SSH for Windows. Uses the binaries from cygwin. Runs without cygwin installed.",
   "main": "index.js",
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git@source.small-tech.org:site.js/lib/portable-rsync-with-ssh-for-windows.git"
   },
+  "funding": {
+    "type": "foundation",
+    "url": "https://small-tech.org/fund-us/"
+  },
   "keywords": [
     "rsync",
     "windows",
@@ -18,6 +22,10 @@
     "cygwin",
     "cygrsync"
   ],
-  "author": "Aral Balkan",
+  "author": {
+    "name": "Aral Balkan",
+    "email": "aral@small-tech.org",
+    "url": "https://ar.al"
+  },
   "license": "AGPL-3.0-or-later"
 }
